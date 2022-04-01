@@ -1,33 +1,40 @@
 function numbers(inputMain) {
   const arrayNumbers = [];
   for (let i = 0; i <= inputMain; i += 1) {
-    console.log(i);
+
     arrayNumbers.push(i);
   }
-  return numbers;
-}
+  return arrayNumbers;
+};
 
-function replace(inputMain) {
-  let numbers = replace(inputMain);
+function newNumbers(inputMain) {
+  let arrayNumbers = newNumbers(inputMain);
   let modifyNumber = [];
+  for (let i = 0; i <= arrayNumbers; i += 1) {
 
-  for (let i = 0; i <= numbers; i += 1) {
+
+
+
+
+
+
     array.forEach(function (inputMain) {
-      if (numbers[i] = 1) {
-        numbers[i] = "Beep!";
+      if (arrayNumbers[i] === 1) {
+        arrayNumbers[i] = "Beep!";
 
-      } else if (number[i] = 2) {
-        numbers[i] = "Boop!";
-      } else (number[i] = 3)
+      } else if (arrayNumbers[i] === 2) {
+        arrayNumbers[i] = "Boop!";
+      } else (arrayNumbers[i] === 3)
 
-      numbers[i] = "Won't you be my neighbor?"
+      arrayNumbers[i] = "Won't you be my neighbor?"
 
 
     }
-    modifyNumber.push(array[i]).replace(number[i])
+
     )
+    modifyNumber.push(arrayNumbers[i]);
   };
 
-  return replace;
+  return arrayNumbers;
 
 };
