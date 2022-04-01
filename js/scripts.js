@@ -1,6 +1,6 @@
-function numbers(inputmain) {
-  const start = 0;
-  const end = inputmain;
-  const arrayOfNumbers = inputmain.split("");
-  return arrayOfNumbers;
+function numbers(inputMain) {
+  let numFiller = [];
+  for (var i = 0; i <= inputMain; i++) {
+    numFiller.push(i);
+  }
 }
