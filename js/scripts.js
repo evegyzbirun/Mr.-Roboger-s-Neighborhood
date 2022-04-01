@@ -1,6 +1,6 @@
 function numbers(inputMain) {
-  let numFiller = [];
-  for (var i = 0; i <= inputMain; i++) {
-    numFiller.push(i);
+  for (let index = 0; index <= inputMain; index += 1) {
+    console.log(index);
   }
 }
+numbers(5);
