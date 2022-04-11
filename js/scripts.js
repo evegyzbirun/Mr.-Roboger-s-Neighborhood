@@ -2,23 +2,43 @@ function numbers(inputMain) {
   const arrayNumbers = [];
   for (let i = 0; i <= inputMain; i += 1) {
 
-    arrayNumbers.push(i);
+
+
+
+    arrayNumbers.push(i.toString());
   }
-  return arrayNumbers;
+  let fixedArrayNumbers = [];
+  arrayNumbers.forEach(function (x) {
+    if (x.includes("3")) {
+      fixedArrayNumbers.push('"Won\'t you be my neighbor?"');
+    } else if (x.includes("2")) {
+      fixedArrayNumbers.push('"Boop!"');
+    } else if (x.includes("1")) {
+      fixedArrayNumbers.push('"Beep!"');
+    } else if (x.includes("0")) {
+      fixedArrayNumbers.push('"0"');
+    } else {
+      fixedArrayNumbers.push(x);
+    }
+  });
+  return fixedArrayNumbers;
 };
 
-function newNumbers(inputMain) {
-  let arrayNumbers = numbers(inputMain);
+$(document).ready(function () {
+  $("form#wordReplace").submit(function (event) {
+    event.preventDefault();
+    if ($("#inputNumber").val() == "") {
+      alert("Need number!!!")
+    } else {
 
-  for (let i = 0; i > 9; i++) {
-    // for each element that more than 10 we need to split it on new array to compare every element in side if there are (1 and 2) or (2 and 3) or (3 and 1) or (1 and 2 and 3). we replace the element with the word based if the greater number of there three.
+    }
+    const inputMain = $("#inputNumber").val();
+    const fixedArrayNumbers = numbers(inputMain);
+    const finalArray = fixedArrayNumbers.join(", ");
+    $("#arrayOutput").html(finalArray);
 
-    let modifyNumber = [];
-    modifyNumber.push(arrayNumbers[i] += 1)
+  });
+});
 
 
 
-
-  };
-  return modifyNumber;
-}
